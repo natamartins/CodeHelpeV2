@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "cypress": "cypress open",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -16,6 +17,7 @@
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-select": "^5.7.7",
     "sass": "^1.69.5"
   },
   "devDependencies": {
