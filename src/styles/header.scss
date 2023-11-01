@@ -1,0 +1,36 @@
+.header {
+    background-color: #242526;
+}
+.header_nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0px;
+
+    h1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.header_list-link{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+.header_list-link-btn button{
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: none;
+    border-color: transparent;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover{
+        scale: 1.1;
+        
+    }
+}
