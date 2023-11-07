@@ -15,10 +15,14 @@
     "axios": "^1.6.0",
     "lucide-vue-next": "^0.291.0",
     "next": "14.0.1",
+    "next-auth": "^4.24.4",
+    "nookies": "^2.5.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.47.0",
     "react-select": "^5.7.7",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.2",
@@ -29,9 +33,11 @@
     "@storybook/nextjs": "^7.5.2",
     "@storybook/react": "^7.5.2",
     "@storybook/testing-library": "^0.2.2",
+    "@types/cookie": "^0.5.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/uuid": "^9.0.6",
     "cypress": "^13.4.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
