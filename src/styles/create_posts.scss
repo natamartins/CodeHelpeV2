@@ -1,0 +1,55 @@
+.card_create-post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+
+    border: 2px solid #f1f1f1;
+    padding: 5px;
+    border-radius: 30px;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #f1f1f1;
+        }
+    }
+
+    img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+    }
+
+    button {
+        padding: 5px 25px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}
+
+.card_add-photo-video {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+
+    button {
+        display: flex;
+        align-items: center;
+        color: #f1f1f1;
+        background-color: transparent;
+        border: none;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+}

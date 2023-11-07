@@ -1,0 +1,35 @@
+.card_all-posts{
+    padding: 10px;
+
+    background-color: #242526;
+    border-radius: 10px;
+}
+
+.card_info-post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+
+        span {
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.photo_post img{
+    border-radius: 10px;
+}
