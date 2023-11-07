@@ -1,16 +1,15 @@
 "use client"
+import { signIn, signOut, useSession } from "next-auth/react"
 import Image from "next/image"
 import IconLogin from '@/img/icon_login.svg'
 import IocnGoogle from '@/img/google.png'
-
-import { signIn, signOut, useSession } from "next-auth/react"
+import GithubIcon from "@/img/github.svg"
 
 export default function Home() {
   const { data: session } = useSession()
 
   if (session?.user) {
-    window.location.href = '/home'
-    console.log("Ola, chegou aqui!!")
+    window.location.href = "/home"
   }
 
   return (
@@ -23,11 +22,13 @@ export default function Home() {
 
         <div>
           <button className="btn_login btn" onClick={() => signIn("google")}>
-            Join with
+            Join with google
             <Image src={IocnGoogle} alt="" />
           </button>
-          <span />
-          <button className="btn_create btn">Create account</button>
+          <button className="btn_login btn" onClick={() => signIn("github")}>
+            Join with github
+            <Image src={GithubIcon} alt="" width={35} height={35} />
+          </button>
         </div>
       </div>
     </section>
