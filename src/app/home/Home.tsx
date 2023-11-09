@@ -10,16 +10,6 @@ import LogoIcon from '@/img/bx-code-alt.svg'
 import IconAddPhoto from '@/img/icon-add-photo.svg'
 import IconAddVideo from '@/img/icon-add-video.svg'
 
-// interface TypeSession {
-//     session: {
-//         user?: {
-//             name: string,
-//             email: string,
-//             image?: string
-//         }
-//     }
-// }
-
 const Home = () => {
     const { data: session }: any = useSession()
     const [closed, setClosed] = useState(false)
