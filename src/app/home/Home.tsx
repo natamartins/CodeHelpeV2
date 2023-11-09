@@ -41,7 +41,7 @@ const Home = () => {
                     {
                         closed ? (
                             <button className='box_signOut' onClick={() => signOut()}>Sair de {session?.user.name} <span /></button>
-                        ) : ""
+                        ) : null
                     }
                 </nav>
                 <div className='navbar_mobile'>
