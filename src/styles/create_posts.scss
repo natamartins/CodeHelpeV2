@@ -4,8 +4,9 @@
     justify-content: space-between;
     margin-bottom: 1.2rem;
 
-    border: 2px solid #f1f1f1;
-    padding: 5px;
+    border: 2px solid #acacac;
+    background-color: #fff;
+    padding: 10px;
     border-radius: 30px;
 
     div {
@@ -39,7 +40,7 @@
 .card_add-photo-video {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
 
 
     button {

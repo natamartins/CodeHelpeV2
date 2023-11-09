@@ -1,26 +1,30 @@
 .container_main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 2.5rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    margin-top: 7rem;
 }
 
 .content_grid-one {
     display: flex;
     flex-direction: column;
+}
 
-    justify-content: center;
+.container_person {
+    max-width: 200px;
+    width: 100%;
+    // position: fixed;
+    // top: 7rem;
 }
 
 .card_profile {
     max-width: 200px;
     width: 100%;
-    height: 280px;
+    height: 180px;
     border-radius: 10px;
-    background-color: #1e1e1e;
+    background-color: #fff;
     margin-bottom: 1.5rem;
     text-align: center;
-    position: absolute;
-    top: 6rem;
 }
 
 .card_profile-background {
@@ -28,7 +32,7 @@
     background-position: center;
     background-size: contain;
     width: 100%;
-    height: 65px;
+    height: 60px;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -37,8 +41,7 @@
 }
 
 .card_profiile-img {
-    margin-top: -1.5rem;
-    margin-bottom: 10px;
+    margin-top: -1.7rem;
 
     p:nth-child(2) {
         font-size: 14px;
@@ -53,35 +56,93 @@
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    border: 3px solid #1e1e1e;
-}
-
-.card_profile-list-skills {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
+    border: 3px solid #fff;
 }
 
 .card_notification {
-    max-width: 200px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     border-radius: 10px;
-    background-color: #1e1e1e;
+    background-color: #fff;
     padding: 10px;
     margin-bottom: 3rem;
+
+    button {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: transparent;
+        color: #222;
+
+        &:hover {
+            background-color: #f3f3f3;
+        }
+
+        span {
+            position: absolute;
+            top: 4px;
+            left: -8px;
+            color: green;
+        }
+    }
 }
 
 .content_grid-one-btn-create {
     padding: 5px 15px;
     max-width: 200px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: none;
     border-color: none;
     cursor: pointer;
+    background-color: #008000;
+    color: #fff;
+    padding: 10px 30px;
 
     &:hover {
         scale: 1.1;
+    }
+}
+
+.card_add-photo-video {
+    margin-bottom: 3rem;
+
+    button {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+
+// tablet
+@media (max-width: 810px) {
+    .container_main {
+        grid-template-columns: 10em 1fr;
+        gap: 1rem;
+    }
+
+    .box_signOut {
+        right: 1.7rem;
+    }
+}
+
+// mobile
+@media (max-width: 600px) {
+    .container_main {
+        grid-template-columns: 1fr;
+    }
+
+    .content_grid-one,
+    .container_messages {
+        display: none;
     }
 }
