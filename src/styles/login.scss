@@ -7,7 +7,8 @@
 }
 
 .icon_login img {
-    width: 30rem;
+    max-width: 30rem;
+    width: 100%;
     height: 30rem;
 }
 
@@ -63,4 +64,27 @@
     }
 }
 
-// .btn_create {}
+// mobile
+
+@media (max-width: 600px) {
+    .icon_login {
+        position: absolute;
+        top: 5rem;
+        z-index: -1;
+        opacity: 70%;
+    }
+
+    .container_login {
+        margin-top: 0rem;
+    }
+
+    .box_login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+}

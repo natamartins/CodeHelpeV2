@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Photo from '@/img/my-photo.jpeg'
 import IconLogo from '@/img/bx-code-alt.svg'
+import { BookMarked, Bookmark, Heart, ThumbsDown, ThumbsUp } from 'lucide-react'
 
 const Index = () => {
     return (
@@ -19,13 +20,30 @@ const Index = () => {
             <span className='photo_post'>
                 <Image src={Photo} alt='' />
             </span>
-            <div>
-                <span>
-                    <p>three  icon</p>
-                </span>
-                <span>
-                    <p>one icon</p>
-                </span>
+            <div className='links_post'>
+                <ul>
+                    <li>
+                        <button>
+                            <Heart size={20} />
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <ThumbsUp size={20} />
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <ThumbsDown size={20} />
+                        </button>
+                    </li>
+                </ul>
+                <button>
+                    <Bookmark size={20} />
+                </button>
+            </div>
+            <div className='box_comments'>
+                <button>Comentarios</button>
             </div>
         </article>
     )
