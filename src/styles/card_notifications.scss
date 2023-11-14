@@ -1,0 +1,62 @@
+.card_notification {
+    position: relative;
+}
+
+.conatiner_notificaion {
+    position: absolute;
+    right: -19rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    background-color: #fff;
+    box-shadow: 1px 1px 10px #333;
+    border-radius: 5px;
+
+    span{
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+
+        position: absolute;
+        left: -0.6rem;
+        rotate: 45deg;
+    }
+}
+
+.card_notification-span {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+
+    img {
+        border-radius: 50%;
+    }
+
+    &:hover {
+        background-color: rgb(227, 227, 227);
+        border-radius: 5px;
+    }
+}
+
+.box_info-notification {
+    div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        h6 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
