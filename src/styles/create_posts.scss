@@ -8,17 +8,21 @@
     background-color: #fff;
     padding: 10px;
     border-radius: 30px;
+    gap: 5px;
 
     div {
+        width: 100%;
         display: flex;
         align-items: center;
         gap: 1rem;
 
         input {
+            width: 430px;
+            word-wrap: break-word;
             background-color: transparent;
             border: none;
             outline: none;
-            color: #f1f1f1;
+            color: #222;
         }
     }
 

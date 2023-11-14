@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Bell, HomeIcon, Mail, Search, Smartphone, User2 } from 'lucide-react';
 import CardPost from "@/components/CardPosts/Index"
 import CardRequest from '@/components/CardRequest/Index'
+import CardNotification from '@/components/CardNotification/Index'
 import NewMessage from '@/components/CardNewMessage/Index'
 import LogoIcon from '@/img/bx-code-alt.svg'
 import IconAddPhoto from '@/img/icon-add-photo.svg'
@@ -13,7 +14,8 @@ import IconAddVideo from '@/img/icon-add-video.svg'
 const Home = () => {
     const { data: session }: any = useSession()
     const [closed, setClosed] = useState(false)
-    const [resquest, setRequest] = useState(5)
+    const [openNotification, setOpenNotification] = useState(false)
+    const [resquest, setRequest] = useState(10)
 
     if (session === null) {
         window.location.href = "/"
@@ -23,7 +25,7 @@ const Home = () => {
         <>
             <header className="header">
                 <nav className="header_nav-bar container">
-                    <h1>Code Help-BR <Image src={LogoIcon} alt="logo icon" /></h1>
+                    <h1> Code Help-BR <Image src={LogoIcon} alt="logo icon" /></h1>
                     <button className='btn_signOut' onClick={() => setClosed(!false)}>
                         <Image src={session?.user?.image} alt='' width={30} height={30} style={{ borderRadius: "50%" }} />
                         <p>{session?.user?.name}</p>
@@ -62,15 +64,54 @@ const Home = () => {
                         </article>
 
                         <article className="card_notification">
-                            <button>
+                            <button onClick={() => setOpenNotification(!false)}>
                                 <span>+5</span>
                                 <Bell size={20} />
                                 notification
                             </button>
+                            {
+                                openNotification ? (
+                                    <span className='conatiner_notificaion'>
+                                        <span />
+                                        <CardNotification
+                                            image={session?.user?.image}
+                                            name={session?.user?.name}
+                                            message='Aceitou sua solicitação'
+                                            data={4}
+                                        />
+                                        <CardNotification
+                                            image={session?.user?.image}
+                                            name={session?.user?.name}
+                                            message='Aceitou sua solicitação'
+                                            data={4}
+                                        />
+                                        <CardNotification
+                                            image={session?.user?.image}
+                                            name={session?.user?.name}
+                                            message='Aceitou sua solicitação'
+                                            data={4}
+                                        />
+                                        <CardNotification
+                                            image={session?.user?.image}
+                                            name={session?.user?.name}
+                                            message='Aceitou sua solicitação'
+                                            data={4}
+                                        />
+                                        <CardNotification
+                                            image={session?.user?.image}
+                                            name={session?.user?.name}
+                                            message='Aceitou sua solicitação'
+                                            data={4}
+                                        />
+                                    </span>
+                                ) : ''
+                            }
                             <button>
                                 <span>+3</span>
                                 <Mail size={20} />
-                                message</button>
+                                message
+                            </button>
+
                         </article>
 
                         <button className="content_grid-one-btn-create">Create Post</button>
