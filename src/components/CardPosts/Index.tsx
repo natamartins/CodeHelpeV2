@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Photo from '@/img/my-photo.jpeg'
 import IconLogo from '@/img/bx-code-alt.svg'
-import { BookMarked, Bookmark, Heart, ThumbsDown, ThumbsUp } from 'lucide-react'
+import { Bookmark, Heart, ThumbsDown, ThumbsUp } from 'lucide-react'
 
 const Index = () => {
+    const [heart, setHeart] = useState(0)
+    const [like, setLike] = useState(0)
+    const [disLike, setDisLike] = useState(0)
+
     return (
         <article className='card_all-posts'>
             <div className='card_info-post'>
@@ -23,18 +27,21 @@ const Index = () => {
             <div className='links_post'>
                 <ul>
                     <li>
-                        <button>
+                        <button onClick={() => setHeart(heart + 1)}>
                             <Heart size={20} />
+                            <span>{heart}</span>
                         </button>
                     </li>
                     <li>
-                        <button>
+                        <button onClick={() => setLike(like + 1)}>
                             <ThumbsUp size={20} />
+                            <span>{like}</span>
                         </button>
                     </li>
                     <li>
-                        <button>
+                        <button onClick={() => setDisLike(disLike + 1)}>
                             <ThumbsDown size={20} />
+                            <span>{disLike}</span>
                         </button>
                     </li>
                 </ul>

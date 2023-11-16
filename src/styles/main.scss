@@ -1,6 +1,6 @@
 .container_main {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
+    justify-content: space-around;
     gap: 2rem;
     margin-top: 7rem;
 }
@@ -8,6 +8,16 @@
 .content_grid-one {
     display: flex;
     flex-direction: column;
+}
+
+.content_grid-two {
+    max-width: 45%;
+    width: 100%;
+}
+
+.container_messages {
+    max-width: 30%;
+    width: 100%;
 }
 
 .container_person {
@@ -125,24 +135,27 @@
 
 // tablet
 @media (max-width: 810px) {
-    .container_main {
-        grid-template-columns: 10em 1fr;
-        gap: 1rem;
+    .container_messages {
+        display: none;
     }
 
-    .box_signOut {
-        right: 1.7rem;
+    .content_grid-two {
+        max-width: 70%;
     }
+
 }
 
 // mobile
 @media (max-width: 600px) {
     .container_main {
-        grid-template-columns: 1fr;
+        justify-content: center;
     }
 
-    .content_grid-one,
-    .container_messages {
+    .content_grid-one {
         display: none;
+    }
+
+    .content_grid-two {
+        max-width: 95%;
     }
 }

@@ -11,7 +11,7 @@
 }
 
 .box_request {
-    max-width: 300px;
+    max-width: 70%;
     width: 100%;
     background-color: #fff;
     border-radius: 10px;
@@ -37,6 +37,7 @@
 
 .button_request {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1.5rem;
 
