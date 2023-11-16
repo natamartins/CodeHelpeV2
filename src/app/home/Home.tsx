@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { signOut, useSession } from "next-auth/react"
 import Image from "next/image";
 import { Bell, HomeIcon, Mail, Search, Smartphone, User2 } from 'lucide-react';
@@ -8,14 +8,15 @@ import CardRequest from '@/components/CardRequest/Index'
 import CardNotification from '@/components/CardNotification/Index'
 import NewMessage from '@/components/CardNewMessage/Index'
 import LogoIcon from '@/img/bx-code-alt.svg'
-import IconAddPhoto from '@/img/icon-add-photo.svg'
-import IconAddVideo from '@/img/icon-add-video.svg'
+import SelectFile from '@/components/CardSelectFile/Index';
+
 
 const Home = () => {
     const { data: session }: any = useSession()
     const [closed, setClosed] = useState(false)
     const [openNotification, setOpenNotification] = useState(false)
     const [resquest, setRequest] = useState(10)
+
 
     if (session === null) {
         window.location.href = "/"
@@ -64,7 +65,7 @@ const Home = () => {
                         </article>
 
                         <article className="card_notification">
-                            <button onClick={() => setOpenNotification(!false)}>
+                            <button onClick={() => setOpenNotification(true)}>
                                 <span>+5</span>
                                 <Bell size={20} />
                                 notification
@@ -73,6 +74,7 @@ const Home = () => {
                                 openNotification ? (
                                     <span className='conatiner_notificaion'>
                                         <span />
+                                        <button onClick={() => setOpenNotification(!true)}>X</button>
                                         <CardNotification
                                             image={session?.user?.image}
                                             name={session?.user?.name}
@@ -131,18 +133,7 @@ const Home = () => {
                             </div>
                             <button>Post</button>
                         </div>
-
-                        <div className="card_add-photo-video">
-                            <button>
-                                <Image src={IconAddPhoto} alt="" />
-                                <p>photo</p>
-                            </button>
-                            <button>
-                                <Image src={IconAddVideo} alt="" />
-                                <p>video</p>
-                            </button>
-                        </div>
-
+                        <SelectFile />
                     </article>
 
                     <article className="content_post">

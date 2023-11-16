@@ -17,7 +17,8 @@
         gap: 1rem;
 
         input {
-            width: 430px;
+            max-width: 430px;
+            width: 100%;
             word-wrap: break-word;
             background-color: transparent;
             border: none;
