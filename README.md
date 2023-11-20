@@ -3,29 +3,25 @@
   Code Help v2
 </h1>
     
-<h2 id="project">📁 Projeto </h2>
-<p>
-Esse é um projetinho pessoal que estou realizando para aprimorar minhas habilidades e conhecimentos!
-A ideia desse projeto é principalmente aumentar minhas skills, conhecendo novas tecnologias e utilizando
-ferramentas novas. Com as tecnologias que atualmente estou me especializando, procuro aprimorar e
-aprofundar mais meus conhecimentos nas mesmas!</p>
+<h2 id="project">📁 Project </h2>
+<p>This is a personal project that I'm doing to improve my skills and knowledge!
+The idea of this project is mainly to increase my skills, learning about new technologies and using
+new tools. With the technologies that I am currently specializing in, I seek to improve and
+deepen my knowledge in the same!</p>
 
-<p>
-  Não possui todas funcionalidades reais de uma rede social, apenas algumas funcionalidades!
-  como:
-</p>
+<p>It doesn't have all the real features of a social network, just some features! as:</p>
 
 - Login com google e github
 - like, dislike, love
 - PWAs(Web mobile)
 - Web Responsive
 
-> Fique à vontade para contribuir neste projeto! Lembre-se que a prática leva a perfeição.
+> Feel free to contribute to this project! Remember that practice makes perfect.
 
 
 
-<h2 id="tecnology">💻 Tecnologias</h2>
-Este projeto foi desenvolvido com as seguintes tecnologias:
+<h2 id="tecnology">💻 Technology</h2>
+This project was developed with the following technologies:
 
 - Next.JS
 - TypeScript
@@ -34,34 +30,34 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - Clean Code
 
 
-<h2 id="usage">🎯 Utilização</h2>
+<h2 id="usage">🎯 Use</h2>
 
-A aplicação está disponível para uso [aqui](https://code-helpe-v2.vercel.app/). Você também pode executá-la em sua máquina localmente. Certifique-se de ter o `Node.js` e o `npm` instalados antes de prosseguir com as etapas abaixo:
+The application is available for use [here](https://code-helpe-v2.vercel.app/). You can also run it on your machine locally. Make sure you have `Node.js` and `npm` installed before proceeding with the steps below:
 
-1. Clone o projeto:
+1. Clone the project:
 
 ```
 $ git clone https://github.com/natamartins/CodeHelpeV2.git
 ```
 
-2. No seu terminal, acesse a pasta do projeto:
+2. In your termi, access the past folder:
 
 ```
 $ cd CodeHelpeV2
 ```
 
-3. Instale as dependências:
+3. Install dependencies:
 
 ```
 $ npm install
 ```
 
-4. Inicie o projeto:
+4. Start project:
 
 ```
 $ npm run dev
 ```
-## rede social
+## social network
 <div style="display: flex;">
   <a href="https://www.linkedin.com/in/nata-martins/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" style="margin-right: 2vw" target="_blank"></a>
 </div>
